@@ -6,7 +6,7 @@ that show the same data being processed and queried the way a real backend
 would. Built as a portfolio project to demonstrate fundamentals rather than
 framework familiarity.
 
-🔗 **Live demo:** [anvitac7.github.io/trackeasy-expense-tracker](#) *(add your GitHub Pages link here)*
+🔗 **Live demo:** [https://anvitac7.github.io/trackeasy-expense-tracker/](#)
 
 ## Screenshots
 
