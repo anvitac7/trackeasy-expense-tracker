@@ -1,0 +1,7 @@
+[
+  { "category": "Dining", "limit": 3000, "spent": 1400 },
+  { "category": "Groceries", "limit": 4000, "spent": 1560 },
+  { "category": "Shopping", "limit": 5000, "spent": 4249 },
+  { "category": "Entertainment", "limit": 1500, "spent": 1139 },
+  { "category": "Transport", "limit": 2000, "spent": 310 }
+]

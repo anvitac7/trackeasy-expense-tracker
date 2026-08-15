@@ -1,0 +1,14 @@
+[
+  { "id": 1, "name": "Swiggy Order", "category": "Dining", "date": "2026-08-14", "amount": -840, "note": "Dinner with friends" },
+  { "id": 2, "name": "BigBasket Groceries", "category": "Groceries", "date": "2026-08-13", "amount": -1560, "note": "Weekly grocery run" },
+  { "id": 3, "name": "BESCOM Electricity Bill", "category": "Utilities", "date": "2026-08-10", "amount": -920, "note": "Monthly bill" },
+  { "id": 4, "name": "Salary Credit", "category": "Income", "date": "2026-08-01", "amount": 52000, "note": "August salary" },
+  { "id": 5, "name": "Myntra", "category": "Shopping", "date": "2026-08-09", "amount": -2350, "note": "New shoes" },
+  { "id": 6, "name": "Netflix Subscription", "category": "Entertainment", "date": "2026-08-05", "amount": -499, "note": "Monthly plan" },
+  { "id": 7, "name": "Uber Ride", "category": "Transport", "date": "2026-08-12", "amount": -310, "note": "Airport drop" },
+  { "id": 8, "name": "Zomato Order", "category": "Dining", "date": "2026-08-11", "amount": -560, "note": "Lunch" },
+  { "id": 9, "name": "Freelance Payment", "category": "Income", "date": "2026-08-07", "amount": 8000, "note": "Design gig" },
+  { "id": 10, "name": "Gym Membership", "category": "Health", "date": "2026-08-03", "amount": -1200, "note": "Monthly fee" },
+  { "id": 11, "name": "PVR Movie Tickets", "category": "Entertainment", "date": "2026-08-08", "amount": -640, "note": "Weekend movie" },
+  { "id": 12, "name": "Amazon Order", "category": "Shopping", "date": "2026-08-06", "amount": -1899, "note": "Headphones" }
+]

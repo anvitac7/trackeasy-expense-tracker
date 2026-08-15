@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Transactions — TrackEasy</title>
+<link rel="stylesheet" href="css/style.css" />
+<script>
+  if (localStorage.getItem('trackeasy-theme') === 'dark') {
+    document.documentElement.classList.add('dark');
+  }
+</script>
+</head>
+<body>
+
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">☀</span>
+      TrackEasy
+    </a>
+    <nav class="sidebar-nav" aria-label="App navigation">
+      <a class="sidebar-link" href="dashboard.html">📊 Dashboard</a>
+      <a class="sidebar-link active" href="transactions.html">🧾 Transactions</a>
+      <a class="sidebar-link" href="index.html">🏠 Home</a>
+    </nav>
+  </aside>
+
+  <main class="app-main">
+    <div class="app-topbar">
+      <div>
+        <h1>Transactions</h1>
+        <p class="subtitle" id="txCount">Loading…</p>
+      </div>
+      <div style="display:flex; gap:0.75rem;">
+        <button class="icon-btn" data-dark-toggle type="button" aria-label="Toggle dark mode">🌓</button>
+        <button class="btn btn-primary" id="openAddModal" type="button">+ Add transaction</button>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <input
+        type="search"
+        id="searchInput"
+        class="search-input"
+        placeholder="Search transactions by name…"
+        aria-label="Search transactions"
+      />
+      <select id="categoryFilter" class="select-input" aria-label="Filter by category">
+        <option value="">All categories</option>
+      </select>
+    </div>
+
+    <section class="panel" aria-label="Transaction list">
+      <div class="tx-list" id="fullTxList">
+        <!-- filled by transactions.js -->
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Add transaction modal -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <h2 id="modalTitle" style="font-size:1.3rem;">Add a transaction</h2>
+    <form id="txForm" novalidate>
+      <div class="form-field">
+        <label for="txName">Description</label>
+        <input type="text" id="txName" name="name" autocomplete="off" />
+        <p class="field-error" id="txNameError">Please enter a description.</p>
+      </div>
+
+      <div class="form-field">
+        <label for="txAmount">Amount (₹)</label>
+        <input type="number" id="txAmount" name="amount" min="1" step="1" />
+        <p class="field-error" id="txAmountError">Enter an amount greater than 0.</p>
+      </div>
+
+      <div class="form-field">
+        <label for="txType">Type</label>
+        <select id="txType" name="type">
+          <option value="expense">Expense</option>
+          <option value="income">Income</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="txCategory">Category</label>
+        <select id="txCategory" name="category">
+          <option>Dining</option>
+          <option>Groceries</option>
+          <option>Utilities</option>
+          <option>Shopping</option>
+          <option>Entertainment</option>
+          <option>Transport</option>
+          <option>Health</option>
+          <option>Income</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="txDate">Date</label>
+        <input type="date" id="txDate" name="date" />
+        <p class="field-error" id="txDateError">Please pick a date.</p>
+      </div>
+
+      <div style="display:flex; gap:0.75rem; margin-top:1.5rem;">
+        <button type="button" class="btn btn-ghost btn-block" id="cancelAddModal">Cancel</button>
+        <button type="submit" class="btn btn-primary btn-block">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/store.js"></script>
+<script src="js/transactions.js"></script>
+</body>
+</html>

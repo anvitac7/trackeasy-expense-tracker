@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TrackEasy — Track smart. Spend easy.</title>
+<meta name="description" content="TrackEasy is a simple expense tracker that helps you see where your money goes and stay ahead of your budgets." />
+<link rel="stylesheet" href="css/style.css" />
+<script>
+  // Applied before paint to avoid a flash of the wrong theme.
+  if (localStorage.getItem('trackeasy-theme') === 'dark') {
+    document.documentElement.classList.add('dark');
+  }
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">☀</span>
+      TrackEasy
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" data-dark-toggle type="button" aria-label="Toggle dark mode">🌓</button>
+      <a href="dashboard.html" class="btn btn-primary">Open App</a>
+      <button class="nav-toggle" data-nav-toggle="#mobile-nav" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">🌤️ Built for everyday spenders</span>
+        <h1>Track smart.<br />Spend <em>easy</em>.</h1>
+        <p style="font-size:1.1rem; max-width:480px;">
+          TrackEasy turns a shoebox of receipts and bank notifications into
+          one clear picture: what you spent, where it went, and whether
+          your budgets are holding up — before the month runs out.
+        </p>
+        <div class="hero-cta">
+          <a href="dashboard.html" class="btn btn-primary">Open the dashboard →</a>
+          <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
+        </div>
+      </div>
+
+      <div>
+        <svg class="sun-arc" viewBox="0 0 300 300" role="img" aria-label="Illustration of a budget progress ring">
+          <circle cx="150" cy="150" r="120" fill="none" stroke="var(--color-border)" stroke-width="18" />
+          <circle cx="150" cy="150" r="120" fill="none" stroke="var(--color-primary)" stroke-width="18"
+                  stroke-linecap="round" stroke-dasharray="754" stroke-dashoffset="240"
+                  transform="rotate(-90 150 150)" />
+          <text x="150" y="142" text-anchor="middle" font-family="Fraunces, serif" font-size="42" fill="var(--color-ink)" font-weight="600">68%</text>
+          <text x="150" y="172" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="var(--color-muted)">of August budget used</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Why TrackEasy</span>
+        <h2>Everything a monthly budget actually needs</h2>
+        <p>No spreadsheets, no 40 features you'll never touch — just the handful of things that actually change how you spend.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card feature-card">
+          <div class="feature-icon bg-primary" aria-hidden="true">📊</div>
+          <h3>Clear dashboard</h3>
+          <p>See total spend, income, and category breakdowns the moment you log in — no digging required.</p>
+        </article>
+        <article class="card feature-card">
+          <div class="feature-icon bg-teal" aria-hidden="true">🎯</div>
+          <h3>Budgets that warn early</h3>
+          <p>Each budget turns amber at 80% and red at 95%, so you find out before you overspend, not after.</p>
+        </article>
+        <article class="card feature-card">
+          <div class="feature-icon bg-secondary" aria-hidden="true">🔍</div>
+          <h3>Searchable transactions</h3>
+          <p>Filter by category or search by name instantly — everything renders client-side, no page reloads.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how-it-works" style="background:var(--color-surface); border-top:1px solid var(--color-border); border-bottom:1px solid var(--color-border);">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">How it works</span>
+        <h2>Three steps, no learning curve</h2>
+      </div>
+      <div class="grid-3">
+        <div>
+          <h3 style="font-size:1.05rem;">1. Add a transaction</h3>
+          <p>Log an expense or income entry with a category — takes under ten seconds.</p>
+        </div>
+        <div>
+          <h3 style="font-size:1.05rem;">2. Set your budgets</h3>
+          <p>Give each category a monthly limit that matches how you actually live.</p>
+        </div>
+        <div>
+          <h3 style="font-size:1.05rem;">3. Stay ahead of it</h3>
+          <p>Glance at the dashboard whenever you like — it always reflects your latest numbers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <a href="index.html" class="brand" style="font-size:1.1rem;">
+      <span class="brand-mark" aria-hidden="true" style="width:30px;height:30px;font-size:0.9rem;">☀</span>
+      TrackEasy
+    </a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="transactions.html">Transactions</a>
+      <a href="https://github.com/anvitac7/TrackEasy---Smart-Expense-Tracker">GitHub</a>
+    </nav>
+    <p style="margin:0; font-size:0.85rem;">Made as a portfolio project · India 🇮🇳</p>
+  </div>
+</footer>
+
+<div id="mobile-nav"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard — TrackEasy</title>
+<link rel="stylesheet" href="css/style.css" />
+<script>
+  if (localStorage.getItem('trackeasy-theme') === 'dark') {
+    document.documentElement.classList.add('dark');
+  }
+</script>
+</head>
+<body>
+
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">☀</span>
+      TrackEasy
+    </a>
+    <nav class="sidebar-nav" aria-label="App navigation">
+      <a class="sidebar-link active" href="dashboard.html">📊 Dashboard</a>
+      <a class="sidebar-link" href="transactions.html">🧾 Transactions</a>
+      <a class="sidebar-link" href="index.html">🏠 Home</a>
+    </nav>
+  </aside>
+
+  <main class="app-main">
+    <div class="app-topbar">
+      <div>
+        <button class="nav-toggle" data-nav-toggle="#sidebar" type="button" aria-label="Toggle menu" style="display:none;">
+          <span></span><span></span><span></span>
+        </button>
+        <h1>Good morning 👋</h1>
+        <p class="subtitle">Here's how August is shaping up.</p>
+      </div>
+      <div style="display:flex; gap:0.75rem;">
+        <button class="icon-btn" data-dark-toggle type="button" aria-label="Toggle dark mode">🌓</button>
+        <a href="transactions.html" class="btn btn-primary">+ Add transaction</a>
+      </div>
+    </div>
+
+    <section class="stat-grid" id="statGrid" aria-label="Summary stats">
+      <!-- filled by dashboard.js -->
+    </section>
+
+    <div class="panel-grid">
+      <section class="panel" aria-labelledby="txHeading">
+        <div class="panel-head">
+          <h2 id="txHeading">Recent transactions</h2>
+          <a href="transactions.html" style="font-size:0.85rem; font-weight:600; color:var(--color-primary);">View all →</a>
+        </div>
+        <div class="tx-list" id="recentTxList">
+          <!-- filled by dashboard.js -->
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="budgetHeading">
+        <div class="panel-head">
+          <h2 id="budgetHeading">Budgets this month</h2>
+        </div>
+        <div id="budgetList">
+          <!-- filled by dashboard.js -->
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/store.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
