@@ -6,8 +6,13 @@ that show the same data being processed and queried the way a real backend
 would. Built as a portfolio project to demonstrate fundamentals rather than
 framework familiarity.
 
-**Live pages:** `index.html` (landing) → `dashboard.html` (overview) →
-`transactions.html` (full list + add transaction).
+🔗 **Live demo:** [yourusername.github.io/trackeasy-expense-tracker](#) *(add your GitHub Pages link here)*
+
+## Screenshots
+
+| Landing | Dashboard | Transactions |
+|---|---|---|
+| ![Landing page](screenshots/LandingPage.png) | ![Dashboard](screenshots/Dashboard.png) | ![Transactions](screenshots/Transactions.png) |
 
 ## Why it's built this way
 
@@ -44,6 +49,7 @@ trackeasy/
 ├── sql/
 │   ├── schema.sql             # Table design (SQLite syntax, portable to Postgres/MySQL)
 │   └── queries.sql            # 5 annotated analytical queries
+├── screenshots/              # README images
 └── README.md
 ```
 
